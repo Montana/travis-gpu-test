@@ -1,4 +1,6 @@
 language: python
+arch: arm64
+dist: focal
 
 resources:
   gpu: true
@@ -7,8 +9,6 @@ before_install:
   - sudo apt-get update
   - sudo apt-get install linux-headers-$(uname -r)
   
-install: pip install gpustat
-
 script: 
  - gpustat -cp
  - uname -r 

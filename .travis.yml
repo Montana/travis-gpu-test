@@ -1,13 +1,15 @@
 language: python
-arch: arm64
-dist: focal
+arch: arm64 # equinix 
+dist: focal # focal fossa
 
 resources:
-  gpu: true
+  gpu: true # activate gpu 
 
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install linux-headers-$(uname -r)
+  - sudo apt-get update # apt-get update 
+  - sudo apt-get install linux-headers-$(uname -r) # grab the latest headers
   
 script: 
- - uname -r 
+  - uname -r # what's the kernel version?
+  
+# override requirements.txt 
